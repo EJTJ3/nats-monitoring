@@ -1,0 +1,43 @@
+{
+  "name": "ejtj3/nats-monitoring",
+  "description": "Nats monitoring api wrapper",
+  "autoload": {
+    "psr-4": {
+      "EJTJ3\\NatsMonitoring\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "EJTJ3"
+    }
+  ],
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\EJTJ3\\NatsMonitoring\\": "tests/"
+    }
+  },
+  "require": {
+    "php" : "^8.1",
+    "jms/serializer": "^3.0",
+    "psr/http-client": "^1.0",
+    "php-http/discovery": "^1.19",
+    "nyholm/psr7": "^1.8"
+  },
+  "require-dev": {
+    "symfony/var-dumper": "^6.3",
+    "jms/serializer": "3.28.0",
+    "symfony/http-client": "6.3.*",
+    "phpunit/phpunit": "^10.0",
+    "friendsofphp/php-cs-fixer": "^3.35",
+    "phpstan/phpstan": "^1.10"
+
+  },
+  "config": {
+    "allow-plugins": {
+      "php-http/discovery": true
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit tests"
+  }
+}
