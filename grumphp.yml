@@ -10,7 +10,6 @@ grumphp:
       config: .php-cs-fixer.php
     phpunit: ~
     phpstan:
-      level: 8
       configuration: "phpstan.neon"
       ignore_patterns:
         - "test"

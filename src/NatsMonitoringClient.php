@@ -129,6 +129,9 @@ final class NatsMonitoringClient
             throw new InvalidArgumentException('Invalid response from the server');
         }
 
-        return $this->serializer->deserialize($content->getBody()->getContents(), $responseClass, 'json');
+        /** @var T $response */
+        $response = $this->serializer->deserialize($content->getBody()->getContents(), $responseClass, 'json');
+
+        return $response;
     }
 }
