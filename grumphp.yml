@@ -1,0 +1,15 @@
+grumphp:
+  process_timeout: 120
+  parallel:
+    enabled: false
+  ascii:
+    succeeded:
+    failed:
+  tasks:
+    phpcsfixer:
+      config: .php-cs-fixer.php
+    phpunit: ~
+    phpstan:
+      configuration: "phpstan.neon"
+      ignore_patterns:
+        - "test"
