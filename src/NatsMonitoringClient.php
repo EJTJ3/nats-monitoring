@@ -14,6 +14,7 @@ use EJTJ3\NatsMonitoring\Model\JetstreamResponse;
 use EJTJ3\NatsMonitoring\Model\LeafnodeResponse;
 use EJTJ3\NatsMonitoring\Model\RoutesResponse;
 use EJTJ3\NatsMonitoring\Model\SubscriptionResponse;
+use Http\Discovery\Psr18ClientDiscovery;
 use JMS\Serializer\SerializerInterface;
 use Psr\Http\Client\ClientExceptionInterface;
 use Psr\Http\Client\ClientInterface;
@@ -39,11 +40,14 @@ final class NatsMonitoringClient
 
     private const ROUTE_LEAFNODE = 'leafz';
 
+    private readonly ClientInterface     $client;
+
     public function __construct(
         private readonly SerializerInterface $serializer,
-        private readonly ClientInterface     $client,
+        ClientInterface $client = null,
         private readonly RequestBuilder      $requestBuilder = new RequestBuilder(),
     ) {
+        $this->client = $client ?? Psr18ClientDiscovery::find();
     }
 
     /**
@@ -61,8 +65,6 @@ final class NatsMonitoringClient
     {
         return $this->doRequest($server, self::ROUTE_LEAFNODE, LeafnodeResponse::class);
     }
-
-    /// ALLES HIER ONDER MOT NOG
 
     public function getRoutez(string $server): RoutesResponse
     {
