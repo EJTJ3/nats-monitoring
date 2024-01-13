@@ -21,16 +21,16 @@
     "jms/serializer": "^3.0",
     "psr/http-client": "^1.0",
     "php-http/discovery": "^1.19",
-    "nyholm/psr7": "^1.8"
+    "psr/http-factory": "^1.0"
   },
   "require-dev": {
-    "symfony/var-dumper": "^6.3",
     "jms/serializer": "3.28.0",
     "symfony/http-client": "6.4.*",
     "phpunit/phpunit": "^10.0",
     "friendsofphp/php-cs-fixer": "^3.41",
     "phpstan/phpstan": "^1.10",
-    "phpro/grumphp-shim": "^2.3"
+    "phpro/grumphp-shim": "^2.3",
+    "nyholm/psr7": "^1.8"
   },
   "config": {
     "allow-plugins": {
