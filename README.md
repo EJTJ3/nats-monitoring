@@ -13,7 +13,7 @@
 # Nats monitoring
 
 ```shell
-$ composer require ejtj
+$ composer require ejtj3/nats-monitoring jms/serializer
 ```
 
 ```php
@@ -46,16 +46,16 @@ $connections = $client->getConnections('https://demo.nats.io:8222', $requestOpti
 
 ## Available methods
 
-| Name          |   Route   |                                                     Method |
-|---------------|:---------:|-----------------------------------------------------------:|
-| General       |   /varz   | `$client->getGeneralSettings('https://demo.nats.io:8222')` |
-| Jetstream     |   /jsz    |       `$client->getJetstream('https://demo.nats.io:8222')` |
-| Connections   |  /connz   |     `$client->getConnections('https://demo.nats.io:8222')` |
-| Accounts      | /accountz |        `$client->getAccounts('https://demo.nats.io:8222')` |
-| Account stats | /accstatz |    `$client->getAccountStats('https://demo.nats.io:8222')` |
-| Subscriptions |  /subsz   |   `$client->getSubscriptions('https://demo.nats.io:8222')` |
-| Routes        |  /routez  |          `$client->getRoutez('https://demo.nats.io:8222')` |
-| Leafnodes     |  /leafz   |       `$client->getLeafnodes('https://demo.nats.io:8222')` |
-| Gateways      | /gatewayz |                                        Not yet implemented |
-| HealthProbe   |  /leafz   |          `$client->getHealth('https://demo.nats.io:8222')` |
+| Name          |   Route   |                                                                 Method |
+|---------------|:---------:|-----------------------------------------------------------------------:|
+| General       |   /varz   |             `$client->getGeneralSettings('https://demo.nats.io:8222')` |
+| Jetstream     |   /jsz    |                   `$client->getJetstream('https://demo.nats.io:8222')` |
+| Connections   |  /connz   |                 `$client->getConnections('https://demo.nats.io:8222')` |
+| Accounts      | /accountz |                    `$client->getAccounts('https://demo.nats.io:8222')` |
+| Account stats | /accstatz |                `$client->getAccountStats('https://demo.nats.io:8222')` |
+| Subscriptions |  /subsz   |               `$client->getSubscriptions('https://demo.nats.io:8222')` |
+| Routes        |  /routez  |                      `$client->getRoutez('https://demo.nats.io:8222')` |
+| Leafnodes     |  /leafz   |                   `$client->getLeafnodes('https://demo.nats.io:8222')` |
+| Gateways      | /gatewayz |                                                    Not yet implemented |
+| HealthProbe   |  /leafz   |                      `$client->getHealth('https://demo.nats.io:8222')` |
 
