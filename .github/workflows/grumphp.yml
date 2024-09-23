@@ -1,6 +1,11 @@
-name: GrumPHP
+name: Grumphp
 
-on: [push, pull_request]
+on: 
+  push:
+    branches:
+     - master
+  pull_request:
+
 permissions:
   contents: read
 
@@ -10,7 +15,7 @@ jobs:
     strategy:
       matrix:
         operating-system: [ubuntu-latest]
-        php-versions: ['8.1', '8.2', '8.3']
+        php-versions: ['8.1', '8.3']
         composer-options: ['', '--prefer-lowest']
         composer-versions: ['composer:v2']
       fail-fast: false
