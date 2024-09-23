@@ -10,10 +10,10 @@ use JMS\Serializer\Annotation\SerializedName;
 
 final class RoutesResponse
 {
-    #[Serializer\SerializedName(name: 'server_id')]
+    #[SerializedName(name: 'server_id')]
     public string $serverId;
 
-    #[Serializer\SerializedName(name: 'server_name')]
+    #[SerializedName(name: 'server_name')]
     public string $serverName;
 
     #[Serializer\Type(name: 'NatsDateTimeImmutable')]
