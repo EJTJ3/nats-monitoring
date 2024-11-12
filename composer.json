@@ -27,8 +27,8 @@
     "jms/serializer": "3.28.0",
     "symfony/http-client": "6.4.*",
     "phpunit/phpunit": "^10.0",
-    "friendsofphp/php-cs-fixer": "^3.41",
-    "phpstan/phpstan": "^1.10",
+    "friendsofphp/php-cs-fixer": "^3.62",
+    "phpstan/phpstan": "^2.0",
     "phpro/grumphp-shim": "^2.3",
     "nyholm/psr7": "^1.8"
   },
