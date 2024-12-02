@@ -25,7 +25,7 @@
   },
   "require-dev": {
     "jms/serializer": "3.28.0",
-    "symfony/http-client": "6.4.*",
+    "symfony/http-client": "7.2.*",
     "phpunit/phpunit": "^10.0",
     "friendsofphp/php-cs-fixer": "^3.41",
     "phpstan/phpstan": "^1.10",
