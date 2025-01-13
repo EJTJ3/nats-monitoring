@@ -111,8 +111,8 @@ final class Connection
         string $version,
         ?string $reason,
         ?array $subscriptionsList = [],
-        string $tlsCipherSuite = null,
-        string $authorizedUser = null
+        ?string $tlsCipherSuite = null,
+        ?string $authorizedUser = null
     ) {
         $this->tls_version = null;
         $this->cid = $cid;
