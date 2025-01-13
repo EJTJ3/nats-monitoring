@@ -25,7 +25,7 @@ final class RequestBuilder
         string $method,
         string $url,
         array $query = [],
-        StreamInterface|string $body = null
+        StreamInterface|string|null $body = null
     ): RequestInterface {
         if (count($query) !== 0) {
             $url .= '?' . http_build_query($query);

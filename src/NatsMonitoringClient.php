@@ -44,7 +44,7 @@ final class NatsMonitoringClient
 
     public function __construct(
         private readonly SerializerInterface $serializer,
-        ClientInterface $client = null,
+        ?ClientInterface $client = null,
         private readonly RequestBuilder      $requestBuilder = new RequestBuilder(),
     ) {
         $this->client = $client ?? Psr18ClientDiscovery::find();
