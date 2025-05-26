@@ -24,7 +24,7 @@
     "psr/http-factory": "^1.0"
   },
   "require-dev": {
-    "jms/serializer": "3.28.0",
+    "jms/serializer": "3.32.5",
     "symfony/http-client": "6.4.*",
     "phpunit/phpunit": "^10.0",
     "friendsofphp/php-cs-fixer": "^3.62",
