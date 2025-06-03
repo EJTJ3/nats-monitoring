@@ -25,7 +25,7 @@ final class ConnectionResponse
     public int $limit;
 
     /**
-     * @var Connection[]
+     * @var array<Connection>
      */
     #[Serializer\Type(name: "array<EJTJ3\NatsMonitoring\Model\Connection>")]
     public array $connections;

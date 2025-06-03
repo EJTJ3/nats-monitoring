@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Test\EJTJ3\NatsMonitoring;
 
-final class Constant
+final readonly class Constant
 {
-    public const DEMO_SERVER = 'https://demo.nats.io:8222';
+    public const string DEMO_SERVER = 'https://demo.nats.io:8222';
 }

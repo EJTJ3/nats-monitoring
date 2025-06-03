@@ -12,7 +12,7 @@ use JMS\Serializer\Handler\SubscribingHandlerInterface;
 use JMS\Serializer\JsonDeserializationVisitor;
 use DateInterval;
 
-final class NatsDateIntervalHandler implements SubscribingHandlerInterface
+final readonly class NatsDateIntervalHandler implements SubscribingHandlerInterface
 {
     /**
      * @return array<int, array{direction: int, format: string, type: string, method: string}>
