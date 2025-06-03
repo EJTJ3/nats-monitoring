@@ -15,7 +15,7 @@ jobs:
     strategy:
       matrix:
         operating-system: [ubuntu-latest]
-        php-versions: ['8.1', '8.3']
+        php-versions: ['8.4']
         composer-options: ['', '--prefer-lowest']
         composer-versions: ['composer:v2']
       fail-fast: false
@@ -55,5 +55,5 @@ jobs:
           git config --global user.name "Your Name"
           git config --global protocol.file.allow always
       - name: Run the tests on unix
-        run: php vendor/bin/grumphp run --no-interaction
+        run: env PHP_CS_FIXER_IGNORE_ENV=1 php vendor/bin/grumphp run --no-interaction
         continue-on-error: ${{ matrix.php-versions == '8.1' && matrix.composer-options == '--prefer-lowest' }}

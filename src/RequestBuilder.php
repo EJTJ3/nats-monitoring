@@ -10,15 +10,17 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\StreamInterface;
 
-final class RequestBuilder
+final readonly class RequestBuilder
 {
     public function __construct(
-        private readonly RequestFactoryInterface $requestFactory = new Psr17Factory(),
-        private readonly StreamFactoryInterface $streamFactory = new Psr17Factory()
+        private RequestFactoryInterface $requestFactory = new Psr17Factory(),
+        private StreamFactoryInterface $streamFactory = new Psr17Factory()
     ) {
     }
 
     /**
+     * @param non-empty-string $method
+     * @param non-empty-string $url
      * @param array<string, bool|int|string|null> $query
      */
     public function buildRequest(

@@ -7,7 +7,7 @@ namespace EJTJ3\NatsMonitoring\Util;
 use DateInterval;
 use Exception;
 
-final class NatsDateUtil
+final readonly class NatsDateUtil
 {
     /**
      *

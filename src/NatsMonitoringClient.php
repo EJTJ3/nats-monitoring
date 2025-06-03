@@ -22,30 +22,30 @@ use InvalidArgumentException;
 
 final class NatsMonitoringClient
 {
-    private const ROUTE_VARS = 'varz';
+    private const string ROUTE_VARS = 'varz';
 
-    private const ROUTE_CONNECTIONS = 'connz';
+    private const string ROUTE_CONNECTIONS = 'connz';
 
-    private const ROUTE_HEALTH = 'healthz';
+    private const string ROUTE_HEALTH = 'healthz';
 
-    private const ROUTE_SUBSCRIPTIONS = 'subsz';
+    private const string ROUTE_SUBSCRIPTIONS = 'subsz';
 
-    private const ROUTE_ACCOUNT_STATS = 'accstatz';
+    private const string ROUTE_ACCOUNT_STATS = 'accstatz';
 
-    private const ROUTE_JETSTREAM = 'jsz';
+    private const string ROUTE_JETSTREAM = 'jsz';
 
-    private const ROUTE_ACCOUNTZ = 'accountz';
+    private const string ROUTE_ACCOUNTZ = 'accountz';
 
-    private const ROUTE_ROUTEZ = 'routez';
+    private const string ROUTE_ROUTEZ = 'routez';
 
-    private const ROUTE_LEAFNODE = 'leafz';
+    private const string ROUTE_LEAFNODE = 'leafz';
 
-    private readonly ClientInterface     $client;
+    private readonly ClientInterface $client;
 
     public function __construct(
         private readonly SerializerInterface $serializer,
         ?ClientInterface $client = null,
-        private readonly RequestBuilder      $requestBuilder = new RequestBuilder(),
+        private readonly RequestBuilder $requestBuilder = new RequestBuilder(),
     ) {
         $this->client = $client ?? Psr18ClientDiscovery::find();
     }
