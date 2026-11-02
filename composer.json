@@ -25,7 +25,7 @@
   },
   "require-dev": {
     "symfony/http-client": "8.0.*",
-    "phpunit/phpunit": "^12.0",
+    "phpunit/phpunit": "^13.4",
     "friendsofphp/php-cs-fixer": "^3.75",
     "phpstan/phpstan": "^2.1",
     "phpro/grumphp-shim": "^2.12",
